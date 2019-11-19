@@ -1,0 +1,23 @@
+{
+  "name": "twiddler",
+  "version": "1.0.0",
+  "description": "A simple one-page website for Hack Reactor Precourse",
+  "main": "data_generator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakubsvec001/hratx46-twiddler.git"
+  },
+  "keywords": [
+    "twitter-clone",
+    "hackreactor"
+  ],
+  "author": "Jake Wija",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jakubsvec001/hratx46-twiddler/issues"
+  },
+  "homepage": "https://github.com/jakubsvec001/hratx46-twiddler#readme"
+}
