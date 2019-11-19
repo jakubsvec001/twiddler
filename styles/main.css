@@ -1,3 +1,188 @@
-div {
-  color: red
+/* =================
+  FONT FAMILIES
+
+font-family: 'Alatsi', sans-serif;
+font-family: 'Roboto', sans-serif;
+
+
+==================== */
+
+
+
+/* =================
+  RESET DEFAULTS
+==================== */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: 'Roboto', sans-serif;
+  color: whitesmoke;
 }
+
+body {
+  background-color: #15212b;
+}
+
+/* =================
+  TYPEOGRAPHY
+==================== */
+
+.title {
+  color: steelblue;
+  font-family: 'Alatsi', sans-serif;
+  letter-spacing: 3px;
+  font-size: 1.5em;
+  border-bottom: 1px solid steelblue;
+}
+
+main {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.user-image {
+  height: 80px;
+  width: 80px;
+  object-fit: cover;
+  border-radius: 100px;
+}
+
+.user-handle,
+.time-ago {
+  opacity: 62%;
+}
+
+.load-more {
+  color: #15212b;
+}
+
+.message {
+  color: lightgray;
+}
+
+/* =================
+  LAYOUT
+==================== */
+
+.title {
+  min-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+  border-bottom: 1px solid steelblue;
+}
+
+
+.content,
+.load-more {
+  width: 80%;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.content-header {
+  padding-left: 30px;
+  margin-bottom: 1em;
+  opacity: 80%;
+}
+
+.content-container {
+  border: 1px solid steelblue;
+  display: grid;
+  grid-template-columns: 0 80px auto;
+  grid-template-rows: 25px auto;
+  grid-gap: 1em;
+  margin-bottom: 1em;
+  min-height: 110px
+}
+
+.content-container,
+.load-more {
+  box-shadow: 0px 0px 30px 3px rgba(0,0,0,0.25);
+}
+.user-image {
+  grid-column: 2 / 3;
+  grid-row: 1/ 2;
+  margin-top: 1em;
+}
+
+.content-text{
+  display: flex;
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  margin-top: 1em;
+}
+
+.user-name,
+.user-handle,
+.time-ago {
+  margin-right : .5em;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.message {
+  grid-column: 3 / 4;
+  grid-row: 2;
+  margin-right: 1.2em;
+  margin-bottom: 2em;
+  font-size: .9em;
+  letter-spacing: 1px;
+  line-height: 1.3em;
+  border-top: 1px solid slategray;
+  padding-top: 1em;
+}
+
+
+/* =================
+  BUTTONS
+==================== */
+
+.user-link {
+  text-decoration: none;
+}
+
+.user-link:hover,
+.user-link:focus {
+  color: #c45f00da
+}
+
+.load-more {
+  display: block;
+  grid-column: 3/4;
+  grid-row: 3;
+  text-decoration: none;
+  background-color: steelblue;
+  vertical-align: 10px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.load-more:hover,
+.load-more:focus {
+  background-color: #c45f00da;
+}
+
+/* =================
+  MEDIA QUERIES
+==================== */
+
