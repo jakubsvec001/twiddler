@@ -1,16 +1,13 @@
 /* =================
   FONT FAMILIES
-
 font-family: 'Alatsi', sans-serif;
 font-family: 'Roboto', sans-serif;
-
-
 ==================== */
 
 
 
 /* =================
-  RESET DEFAULTS
+  CLEAR DEFAULTS
 ==================== */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -45,7 +42,7 @@ body {
 
 .title {
   color: steelblue;
-  font-family: 'Alatsi', sans-serif;
+  font-family: 'Alatsi', Arial, Helvetica, sans-serif;
   letter-spacing: 3px;
   font-size: 1.5em;
   border-bottom: 1px solid steelblue;
@@ -63,7 +60,10 @@ main {
   border-radius: 100px;
 }
 
-.user-handle,
+.user-link {
+  letter-spacing: 1px;
+}
+
 .time-ago {
   opacity: 62%;
 }
@@ -74,6 +74,11 @@ main {
 
 .message {
   color: lightgray;
+}
+
+.handle {
+  font-size: .9em;
+  letter-spacing: 1px;
 }
 
 /* =================
@@ -89,7 +94,6 @@ main {
   border-bottom: 1px solid steelblue;
 }
 
-
 .content,
 .load-more {
   width: 80%;
@@ -98,29 +102,45 @@ main {
 }
 
 .content-header {
+  color: steelblue;
   padding-left: 30px;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   opacity: 80%;
 }
 
+footer {
+  height: 50px;
+  border-top: 1px solid steelblue;
+  border-bottom: 1px solid steelblue;
+  margin-top: 2em;
+}
+
 .content-container {
-  border: 1px solid steelblue;
   display: grid;
   grid-template-columns: 0 80px auto;
-  grid-template-rows: 25px auto;
+  grid-template-rows: auto auto;
   grid-gap: 1em;
   margin-bottom: 1em;
   min-height: 110px
 }
 
-.content-container,
-.load-more {
-  box-shadow: 0px 0px 30px 3px rgba(0,0,0,0.25);
+.load-more,
+.content-container {
+  border: 1px solid steelblue;
 }
+
+.content-container,
+.load-more,
+.user-container {
+  box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.15);
+}
+
 .user-image {
   grid-column: 2 / 3;
-  grid-row: 1/ 2;
+  grid-row: 1/ 3;
   margin-top: 1em;
+  border: 1px solid #4682b452;
+  box-shadow: 0px 0px 8px 10px rgba(0,0,0,0.15);
 }
 
 .content-text{
@@ -128,14 +148,20 @@ main {
   grid-column: 3 / 4;
   grid-row: 1 / 2;
   margin-top: 1em;
+  margin-right: 1em;
+  justify-content: space-between;
 }
 
 .user-name,
-.user-handle,
 .time-ago {
   margin-right : .5em;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+}
+
+.time-ago {
+  display: block;
+  text-align: right;
 }
 
 .message {
@@ -150,6 +176,15 @@ main {
   padding-top: 1em;
 }
 
+.user-container {
+  border: 1px solid steelblue;
+  padding: 0 0 1em 1em;
+  box-sizing: border-box;
+}
+
+.user-container > .content-tweet > .content-text{
+  margin-bottom: 1em;
+}
 
 /* =================
   BUTTONS
@@ -170,17 +205,29 @@ main {
   grid-row: 3;
   text-decoration: none;
   background-color: steelblue;
-  vertical-align: 10px;
   padding-top: 1em;
   padding-bottom: 1em;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 1em;
+
 }
 
 .load-more:hover,
 .load-more:focus {
   background-color: #c45f00da;
+  border-color: #c45f00da;
 }
+
+/* =================
+  NAV
+==================== */
+
+.nav-link {
+  text-decoration: none;
+
+}
+
 
 /* =================
   MEDIA QUERIES
