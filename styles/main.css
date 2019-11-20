@@ -4,8 +4,6 @@ font-family: 'Alatsi', sans-serif;
 font-family: 'Roboto', sans-serif;
 ==================== */
 
-
-
 /* =================
   CLEAR DEFAULTS
 ==================== */
@@ -97,14 +95,13 @@ main {
 .content,
 .load-more {
   width: 80%;
-  max-width: 550px;
+  max-width: 500px;
   margin: 0 auto;
 }
 
 .content-header {
-  color: steelblue;
   padding-left: 30px;
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
   opacity: 80%;
 }
 
