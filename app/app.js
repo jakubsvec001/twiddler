@@ -1,11 +1,4 @@
-// IMAGES FOR USERS:
-streams.users.shawndrost.image = 'https://images.pexels.com/photos/819530/pexels-photo-819530.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
-streams.users.sharksforcheap.image = 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
-streams.users.mracus.image = 'https://images.pexels.com/photos/556666/pexels-photo-556666.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
-streams.users.douglascalhoun.image = 'https://images.pexels.com/photos/35183/people-homeless-man-male.jpg?auto=compress&cs=tinysrgb&h=750&w=1260'
-
-
-$(document).ready(function(){
+$( document ).ready(function(){
 
   var $streamContainer = $('.stream-container');
   var displayedTweetCount = 0;
@@ -24,7 +17,7 @@ $(document).ready(function(){
 
   $( document ).on("click", ".load-more", function(e){
     // e.preventDefault();
-    var $streamContainer = $('.streamContainer');
+    var $streamContainer = $('.stream-container');
     $streamContainer.html('');
     var index = streams.home.length - 1;
     while(index >= 0){
@@ -39,19 +32,19 @@ $(document).ready(function(){
     $(".load-more").blur();
   });
 
-  $( document ).on('click', ".user-link", function(e){
-    $( ".stream-container" ).html(`<div class="streamContainer"></div>`);
-    $( ".load-more" ).hide();
-    var user = $ ( this ).attr('value');
-    var userTweetArray = streams.users[user]
-    for (var i = userTweetArray.length-1; i >= 0; i--) {
-      tweet = userTweetArray[i];
-      tweet.image = streams.users[user].image
-      $tweet = generateHTML(tweet);
-      $( ".streamContainer" ).append($tweet);
-      $("time.timeago").timeago()
-    };
-  })
+  // $( document ).on('click', ".user-link", function(e){
+  //   $( ".stream-container" ).html(`<div class="stream-container"></div>`);
+  //   $( ".load-more" ).hide();
+  //   var user = $ ( this ).attr('value');
+  //   var userTweetArray = streams.users[user]
+  //   for (var i = userTweetArray.length-1; i >= 0; i--) {
+  //     tweet = userTweetArray[i];
+  //     tweet.image = streams.users[user].image
+  //     $tweet = generateHTML(tweet);
+  //     $( ".streamContainer" ).prepend($tweet);
+  //     $("time.timeago").timeago()
+  //   };
+  // })
 
   $( document ).on('click', '.nav-link', function(e){
     location.reload();

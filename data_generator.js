@@ -68,6 +68,12 @@ var writeTweet = function(message){
   addTweet(tweet);
 };
 
+// IMAGES FOR USERS:
+streams.users.shawndrost.image = 'https://images.pexels.com/photos/819530/pexels-photo-819530.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
+streams.users.sharksforcheap.image = 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+streams.users.mracus.image = 'https://images.pexels.com/photos/556666/pexels-photo-556666.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+streams.users.douglascalhoun.image = 'https://images.pexels.com/photos/35183/people-homeless-man-male.jpg?auto=compress&cs=tinysrgb&h=750&w=1260'
+
 
 
 
