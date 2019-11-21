@@ -62,7 +62,7 @@ main {
   letter-spacing: 1px;
 }
 
-.time-ago {
+.timeago {
   opacity: 62%;
 }
 
@@ -150,7 +150,7 @@ footer {
 }
 
 .user-name,
-.time-ago {
+.timeago {
   margin-right : .5em;
   grid-column: 1 / 2;
   grid-row: 1 / 2;

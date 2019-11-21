@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/jakubsvec001/hratx46-twiddler/issues"
   },
-  "homepage": "https://github.com/jakubsvec001/hratx46-twiddler#readme"
+  "homepage": "https://github.com/jakubsvec001/hratx46-twiddler#readme",
+  "dependencies": {
+    "timeago": "^1.6.7"
+  }
 }

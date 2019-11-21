@@ -12,7 +12,9 @@ $(document).ready(function(){
     $streamBody.prepend($tweet);
     displayedTweetCount++
     index -= 1;
+    $("time.timeago").timeago()
   }
+
 
   $( document ).on("click", ".load-more", function(e){
     e.preventDefault();
@@ -26,6 +28,7 @@ $(document).ready(function(){
       $streamBody.append($tweet);
       index -= 1;
       displayedTweetCount = streams.home.length
+      $("time.timeago").timeago()
     }
 
   $(".load-more").blur();
@@ -40,6 +43,7 @@ $(document).ready(function(){
       tweet = userTweetArray[i];
       $tweet = generateHTML(tweet);
       $( ".streamBody" ).append($tweet);
+      $("time.timeago").timeago()
     };
   })
 
@@ -56,7 +60,7 @@ $(document).ready(function(){
       <img class="user-image" alt='user profile image' src=${tweet.image}>
       <div class="content-text">
         <a class="user-link" href="#" value=${tweet.user}>@${tweet.user}</a>
-        <h3 class="time-ago">· ${tweet.created_at.getTime()}</h3>
+        <time class="timeago" datetime=${tweet.created_at.toISOString()}>time</time>
       </div> <!-- END content-text -->
       <p class="message">${tweet.message}</p>
     </div>`);
